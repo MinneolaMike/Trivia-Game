@@ -17,6 +17,235 @@
 
 <body>
 
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog model-dialog-center" role="document">
+            <div class="modal-content">
+                <!--Modal Header-->
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">RESULTS</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <!--Modal Body-->
+                <div class="modal-body">
+                    <!--Div for the results-->
+                    <div id="results">
+                        <h6 id="number_correct"></h6>
+                        <h6 id="wrong"></h6>
+                        <h6 id="incomplete"></h6>
+                    </div>
+                </div>
+                <!--Modal Footer with Reset Button-->
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Start Over</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Start of the Main Container-->
+    <div class="container">
+        <!--JumboTron for title and start -->
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container text-center">
+                <h1 class="display-4">Sports Trivia</h1>
+                <p class="lead">Lets see how you do on some sports trivia</p>
+                <button id="start" class="button">Start Game</button>
+                <!--Div for the timer-->
+                <div id="timer"></div>
+            </div>
+        </div>
+
+        <!--Form area for the questions-->
+        <form id="quiz" name="quiz">
+            <!--Question 1-->
+            <div class="row">
+                <div class="col-6">
+                    <img class="img-fluid img-thumbnail" src="">
+                </div>
+                <div class="col-6">
+                    <h2 class="questions"></h2>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="correct">
+                    <br>
+                </div>
+            </div>
+            <hr>
+            <!--Question 2-->
+            <div class="row">
+                <div class="col-6">
+                    <img class="img-fluid img-thumbnail" src="">
+                </div>
+                <div class="col-6">
+                    <h2 class="questions"></h2>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="correct">
+                    <br>
+                </div>
+            </div>
+            <hr>
+            <!--Question 3-->
+            <div class="row">
+                <div class="col-6">
+                    <img class="img-fluid img-thumbnail" src="">
+                </div>
+                <div class="col-6">
+                    <h2 class="questions"></h2>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="correct">
+                    <br>
+                </div>
+            </div>
+            <hr>
+            <!--Question 4-->
+            <div class="row">
+                <div class="col-6">
+                    <img class="img-fluid img-thumbnail" src="">
+                </div>
+                <div class="col-6">
+                    <h2 class="questions"></h2>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="correct">
+                    <br>
+                </div>
+            </div>
+            <hr>
+            <!--Question 5-->
+            <div class="row">
+                <div class="col-6">
+                    <img class="img-fluid img-thumbnail" src="">
+                </div>
+                <div class="col-6">
+                    <h2 class="questions"></h2>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="correct">
+                    <br>
+                </div>
+            </div>
+            <hr>
+            <!--Question 6-->
+            <div class="row">
+                <div class="col-6">
+                    <img class="img-fluid img-thumbnail" src="">
+                </div>
+                <div class="col-6">
+                    <h2 class="questions"></h2>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="correct">
+                    <br>
+                </div>
+            </div>
+            <hr>
+            <!--Question 7-->
+            <div class="row">
+                <div class="col-6">
+                    <img class="img-fluid img-thumbnail" src="">
+                </div>
+                <div class="col-6">
+                    <h2 class="questions"></h2>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="correct">
+                    <br>
+                </div>
+            </div>
+            <hr>
+            <!--Question 8-->
+            <div class="row">
+                <div class="col-6">
+                    <img class="img-fluid img-thumbnail" src="">
+                </div>
+                <div class="col-6">
+                    <h2 class="questions"></h2>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="correct">
+                    <br>
+                </div>
+            </div>
+            <hr>
+            <!--Question 9-->
+            <div class="row">
+                <div class="col-6">
+                    <img class="img-fluid img-thumbnail" src="">
+                </div>
+                <div class="col-6">
+                    <h2 class="questions"></h2>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="correct">
+                    <br>
+                </div>
+            </div>
+            <hr>
+            <!--Question 10-->
+            <div class="row">
+                <div class="col-6">
+                    <img class="img-fluid img-thumbnail" src="">
+                </div>
+                <div class="col-6">
+                    <h2 class="questions"></h2>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="incorrect">
+                    <br>
+                    <input type="radio" id="quest" name="question" value="correct">
+                    <br>
+                </div>
+            </div>
+            <hr>
+            <!-- Button for submit and modal launch -->
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+                Submit Your Answers
+            </button>
+        </form>
+    </div>
 
 
 
