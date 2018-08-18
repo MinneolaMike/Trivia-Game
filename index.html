@@ -16,35 +16,6 @@
 </head>
 
 <body>
-
-    <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog model-dialog-center" role="document">
-            <div class="modal-content">
-                <!--Modal Header-->
-                <div class="modal-header" id="modalhead">
-                    <h5 class="modal-title" id="exampleModalLabel">RESULTS</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <!--Modal Body-->
-                <div class="modal-body">
-                    <!--Div for the results-->
-                    <div id="results">
-                        <h6 id="number_correct"></h6>
-                        <h6 id="wrong"></h6>
-                        <h6 id="incomplete"></h6>
-                    </div>
-                </div>
-                <!--Modal Footer with Reset Button-->
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-success">Start Over</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!--Start of the Main Container-->
     <div class="container">
         <!--JumboTron for title and start -->
@@ -52,9 +23,19 @@
             <div class="container text-center">
                 <h1 class="display-4">Golf Trivia</h1>
                 <p class="lead">You will have 60 seconds to answer 10 challenging golf trivia questions</p>
-                <button id="start" class="button">Start Game</button>
+                <button id="start" class="btn btn-success">Start Game</button>
                 <!--Div for the timer-->
                 <div id="timer"></div>
+            </div>
+        </div>
+        <!--Jumbotron for the Results-->
+        <div class="jumbotron jumbotron-fluid" id="resultsJumbo">
+            <div class="container text-center">
+                <h1 class="display-4">Results</h1>
+                <p class="lead" id="correctAnswers"></p>
+                <p class="lead" id="incorrectAnswers"></p>
+                <p class="lead" id="unansweredAnswers"></p>
+                <button type="button" class="btn btn-success" id="startOver">Start Over</button>
             </div>
         </div>
 
@@ -62,187 +43,187 @@
         <form id="quiz" name="quiz">
             <!--Question 1-->
             <div class="row">
-                <div class="col-6">
+                <div class="col-4">
                     <img class="img-fluid mx-auto d-block" style="height: 200px" src="assets/images/clubs.png">
                 </div>
-                <div class="col-6">
+                <div class="col-8">
                     <h2 class="questions">1. What is the maximum number of clubs you are allowed to carry in your golf bag?</h2>
-                    <input type="radio" id="quest" name="question" value="incorrect"> 15
+                    <input type="radio" id="quest" name="q1" value="incorrect"> 15
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> 16
+                    <input type="radio" id="quest" name="q1" value="incorrect"> 16
                     <br>
-                    <input type="radio" id="quest" name="question" value="correct"> 14
+                    <input type="radio" id="quest" name="q1" value="correct"> 14
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> 13
+                    <input type="radio" id="quest" name="q1" value="incorrect"> 13
                     <br>
                 </div>
             </div>
             <hr>
             <!--Question 2-->
             <div class="row">
-                <div class="col-6">
+                <div class="col-4">
                     <img class="img-fluid mx-auto d-block" style="height: 200px" src="assets/images/course.png">
                 </div>
-                <div class="col-6">
+                <div class="col-8">
                     <h2 class="questions">2. Which country has the most golf courses per capita in the World?</h2>
-                    <input type="radio" id="quest" name="question" value="correct"> Scotland
+                    <input type="radio" id="quest" name="q2" value="correct"> Scotland
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> USA
+                    <input type="radio" id="quest" name="q2" value="incorrect"> USA
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> Ireland
+                    <input type="radio" id="quest" name="q2" value="incorrect"> Ireland
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> Australia
+                    <input type="radio" id="quest" name="q2" value="incorrect"> Australia
                     <br>
                 </div>
             </div>
             <hr>
             <!--Question 3-->
             <div class="row">
-                <div class="col-6">
+                <div class="col-4">
                     <img class="img-fluid mx-auto d-block" style="height: 200px" src="assets/images/champ.png">
                 </div>
-                <div class="col-6">
+                <div class="col-8">
                     <h2 class="questions">3. Who is the only golfer to ever complete the Grand Slam?</h2>
-                    <input type="radio" id="quest" name="question" value="incorrect"> Tiger Woods
+                    <input type="radio" id="quest" name="q3" value="incorrect"> Tiger Woods
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> Jack Nicklaus
+                    <input type="radio" id="quest" name="q3" value="incorrect"> Jack Nicklaus
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> Ben Hogan
+                    <input type="radio" id="quest" name="q3" value="incorrect"> Ben Hogan
                     <br>
-                    <input type="radio" id="quest" name="question" value="correct"> Bobby Jones
+                    <input type="radio" id="quest" name="q3" value="correct"> Bobby Jones
                     <br>
                 </div>
             </div>
             <hr>
             <!--Question 4-->
             <div class="row">
-                <div class="col-6">
+                <div class="col-4">
                     <img class="img-fluid mx-auto d-block" style="height: 200px" src="assets/images/nicklaus.jpg">
                 </div>
-                <div class="col-6">
+                <div class="col-8">
                     <h2 class="questions">4. Jack Nicklaus has won the most career major championships, how many has he won? </h2>
-                    <input type="radio" id="quest" name="question" value="incorrect"> 17
+                    <input type="radio" id="quest" name="q4" value="incorrect"> 17
                     <br>
-                    <input type="radio" id="quest" name="question" value="correct"> 18
+                    <input type="radio" id="quest" name="q4" value="correct"> 18
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> 20
+                    <input type="radio" id="quest" name="q4" value="incorrect"> 20
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> 19
+                    <input type="radio" id="quest" name="q4" value="incorrect"> 19
                     <br>
                 </div>
             </div>
             <hr>
             <!--Question 5-->
             <div class="row">
-                <div class="col-6">
+                <div class="col-4">
                     <img class="img-fluid mx-auto d-block" style="height: 200px" src="assets/images/masters.png">
                 </div>
-                <div class="col-6">
+                <div class="col-8">
                     <h2 class="questions">5. Who has the record for the most wins at The Masters?</h2>
-                    <input type="radio" id="quest" name="question" value="incorrect"> Tiger Woods
+                    <input type="radio" id="quest" name="q5" value="incorrect"> Tiger Woods
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> Bobby Jones
+                    <input type="radio" id="quest" name="q5" value="incorrect"> Bobby Jones
                     <br>
-                    <input type="radio" id="quest" name="question" value="correct"> Jack Nicklaus
+                    <input type="radio" id="quest" name="q5" value="correct"> Jack Nicklaus
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> Phil Mickelson
+                    <input type="radio" id="quest" name="q5" value="incorrect"> Phil Mickelson
                     <br>
                 </div>
             </div>
             <hr>
             <!--Question 6-->
             <div class="row">
-                <div class="col-6">
+                <div class="col-4">
                     <img class="img-fluid mx-auto d-block" style="height: 200px" src="assets/images/pga.png">
                 </div>
-                <div class="col-6">
+                <div class="col-8">
                     <h2 class="questions">6. Who is the golfer with the most career wins on the PGA tour?</h2>
-                    <input type="radio" id="quest" name="question" value="correct"> Sam Snead
+                    <input type="radio" id="quest" name="q6" value="correct"> Sam Snead
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> Gary Player
+                    <input type="radio" id="quest" name="q6" value="incorrect"> Gary Player
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> Tiger Woods
+                    <input type="radio" id="quest" name="q6" value="incorrect"> Tiger Woods
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> Jack Nicklaus
+                    <input type="radio" id="quest" name="q6" value="incorrect"> Jack Nicklaus
                     <br>
                 </div>
             </div>
             <hr>
             <!--Question 7-->
             <div class="row">
-                <div class="col-6">
+                <div class="col-4">
                     <img class="img-fluid mx-auto d-block" style="height: 200px" src="assets/images/leetrevino.png">
                 </div>
-                <div class="col-6">
+                <div class="col-8">
                     <h2 class="questions">7. What is the only Grand Slam event Lee Trevino never won?</h2>
-                    <input type="radio" id="quest" name="question" value="incorrect"> PGA Championship
+                    <input type="radio" id="quest" name="q7" value="incorrect"> PGA Championship
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> The Open Championship
+                    <input type="radio" id="quest" name="q7" value="incorrect"> The Open Championship
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> US Open
+                    <input type="radio" id="quest" name="q7" value="incorrect"> US Open
                     <br>
-                    <input type="radio" id="quest" name="question" value="correct"> The Masters
+                    <input type="radio" id="quest" name="q7" value="correct"> The Masters
                     <br>
                 </div>
             </div>
             <hr>
             <!--Question 8-->
             <div class="row">
-                <div class="col-6">
+                <div class="col-4">
                     <img class="img-fluid mx-auto d-block" style="height: 200px" src="assets/images/lpga.png">
                 </div>
-                <div class="col-6">
+                <div class="col-8">
                     <h2 class="questions">8. What female golfer's high school nickname was "Taco"?</h2>
-                    <input type="radio" id="quest" name="question" value="incorrect"> Brittany Lincicome
+                    <input type="radio" id="quest" name="q8" value="incorrect"> Brittany Lincicome
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> Michelle Wie
+                    <input type="radio" id="quest" name="q8" value="incorrect"> Michelle Wie
                     <br>
-                    <input type="radio" id="quest" name="question" value="correct"> Nancy Lopez
+                    <input type="radio" id="quest" name="q8" value="correct"> Nancy Lopez
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> Paula Creamer
+                    <input type="radio" id="quest" name="q8" value="incorrect"> Paula Creamer
                     <br>
                 </div>
             </div>
             <hr>
             <!--Question 9-->
             <div class="row">
-                <div class="col-6">
+                <div class="col-4">
                     <img class="img-fluid mx-auto d-block" style="height: 200px" src="assets/images/trophy.png">
                 </div>
-                <div class="col-6">
+                <div class="col-8">
                     <h2 class="questions">9. Who was the first golfer since Jack Nicklaus to win eight PGA events his first six years on tour?</h2>
-                    <input type="radio" id="quest" name="question" value="correct"> Phil Mickelson
+                    <input type="radio" id="quest" name="q9" value="correct"> Phil Mickelson
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> Tiger Woods
+                    <input type="radio" id="quest" name="q9" value="incorrect"> Tiger Woods
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> Rory McIlroy
+                    <input type="radio" id="quest" name="q9" value="incorrect"> Rory McIlroy
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> Bubba Watson
+                    <input type="radio" id="quest" name="q9" value="incorrect"> Bubba Watson
                     <br>
                 </div>
             </div>
             <hr>
             <!--Question 10-->
             <div class="row">
-                <div class="col-6">
+                <div class="col-4">
                     <img class="img-fluid mx-auto d-block" style="height: 200px" src="assets/images/contract.jpg">
                 </div>
-                <div class="col-6">
+                <div class="col-8">
                     <h2 class="questions">10. What actor likes golf so much, that in all of his movie contracts he has a clause to play 2 rounds
                         of golf every week? </h2>
-                    <input type="radio" id="quest" name="question" value="incorrect"> Leslie Nielson
+                    <input type="radio" id="quest" name="q10" value="incorrect"> Leslie Nielson
                     <br>
-                    <input type="radio" id="quest" name="question" value="correct"> Samuel L. Jackson
+                    <input type="radio" id="quest" name="q10" value="correct"> Samuel L. Jackson
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> Dwayne 'The Rock' Johnson
+                    <input type="radio" id="quest" name="q10" value="incorrect"> Dwayne 'The Rock' Johnson
                     <br>
-                    <input type="radio" id="quest" name="question" value="incorrect"> Vin Diesel
+                    <input type="radio" id="quest" name="q10" value="incorrect"> Vin Diesel
                     <br>
                 </div>
             </div>
             <hr>
             <!-- Button for submit and modal launch -->
-            <button type="button" class="btn btn-success btn-lg btn-block" id="submit" data-toggle="modal" data-target="#exampleModal">
+            <button type="submit" class="btn btn-success btn-lg btn-block" id="submit">
                 Submit Your Answers
             </button>
         </form>
@@ -251,7 +232,7 @@
 
 
     <!--JavaScript-->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
         crossorigin="anonymous"></script>

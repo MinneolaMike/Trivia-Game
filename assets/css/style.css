@@ -1,8 +1,9 @@
-#modalhead {
-    background-color: #28A745;
-}
 
 #jumbo {
     background-image: url("../images/backgroundjumbo.png");
+    color: white;
 }
 
+#timer {
+    font-size: 50px;
+}
